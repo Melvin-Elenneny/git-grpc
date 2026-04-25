@@ -33,7 +33,7 @@ Merci de prendre en compte toutes les étapes minutieusement, et ne pas modifier
 
 Pour tout problème, merci de me contacter en MP sur Sonate (Melvin Lannoy), ou de passer par le forum de discussion Introduction à la programmation, ou de contacter votre tuteur.
 
-N'oubliez pas de faire un Ctrl + S à chaque midifs ! Sinon vous perdez votre travail !
+N'oubliez pas de faire un Ctrl + S à chaques modifications ! Sinon vous perdez votre travail !
 
 Bon travail à vous, groupe C !!
 
