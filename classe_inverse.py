@@ -16,7 +16,9 @@ ATTENTION ! il y a un espace entre "code" et "."
 
 Etape 5 (récupération des dernières modifications du programme): toujours dans le terminal, tapez : git pull
 
-A partir de là, vous pouvez travailler normalement sur le projet. Une fois finis, sauvegardez vos modifications :
+A partir de là, vous pouvez travailler normalement sur le projet. Une fois finis faites Crtl + S , sauvegardez vos modifications :
+Vous pourrez voir un "M" se rajouter sur l'onglet du haut, qui donnera ensuite "classe_inverse.py M"
+le "M" signifie midifified, donc que votre programme a bien été sauvegardé
 
 Etape 6 (sauvegarder les modifications) : dans le terminal, tapez : git add .
 Il y a encore un espace entre "add" et "."
@@ -30,6 +32,8 @@ Etape 8 (envoyer sur GitHub) : dans le terminal, tapez : git push
 Merci de prendre en compte toutes les étapes minutieusement, et ne pas modifier / effacer le texte ci-dessus sans m'en informer.
 
 Pour tout problème, merci de me contacter en MP sur Sonate (Melvin Lannoy), ou de passer par le forum de discussion Introduction à la programmation, ou de contacter votre tuteur.
+
+N'oubliez pas de faire un Ctrl + S à chaque midifs ! Sinon vous perdez votre travail !
 
 Bon travail à vous, groupe C !!
 
