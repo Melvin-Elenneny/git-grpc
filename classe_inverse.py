@@ -39,15 +39,19 @@ N'oubliez pas de faire un Ctrl + S à chaques modifications ! Sinon vous perdez 
 
 
 
-# fichier dictionnaire
+# fichier dictionnaire / tirage mot aléatoire
 
 import os
+import random
+
 if os.path.exists("dictionnaire.txt"):
     with open ("dictionnaire.txt", "r") as file:
-        print(file.readlines())
-        file.close()
+        mots_du_dictionnaire = file.readlines()
+        mot_random = random.choice(mots_du_dictionnaire)
+        print(mot_random)
+        
 else:
-    print("Le document n'existe pas ! Vérifiez les lignes 45 et 46.")
+    print("Le document n'existe pas ! Vérifiez les lignes 47 et 48.")
 
 
 
