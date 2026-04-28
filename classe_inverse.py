@@ -43,17 +43,55 @@ Vous y trouverez aussi ce lien : https://docs.python.org/fr/3/tutorial/inputoutp
 
 
 
-from random import random
+from random import choice
 
 # lecture du fichier "dictionnaire.txt"
-f = open("dictionnaire.txt", "r", encoding="utf-8")
-with open("dictionnaire.txt", encoding="utf-8") as f:
-    lines = f.read()
-    #print(lines) je teste l'affichage, ne pas prendre en compte, cette ligne sera supprimée
+#f = open("dictionnaire.txt", "r", encoding="utf-8")
+with open("dictionnaire.txt", "r", encoding="utf-8") as f:
+    lignes = f.readlines()
+    #print(lignes) #je teste l'affichage, ne pas prendre en compte, cette ligne sera supprimée
 f.closed
 
 
 # mot aléatoire
+mot = choice(lignes)
+mot = mot.split(";")[0]
+longueur = len(mot)
 
+
+# mot caché
+mot_cache = []
+
+for lettre in mot:
+    mot_cache.append("_")
+
+
+# compteur de vies
+vies = 5
+
+
+# tentatives
+while vies > 0:
+    print("Mot :", mot_cache)
+    print("Vies restantes :", vies)
+
+    lettre = input("Saisissez une lettre :")
+
+    if lettre in mot:
+        print("Ok")
+        
+        position = 0
+        for i in mot:
+            if i == lettre:
+                mot_cache[position] = lettre
+            
+            position = position + 1
+    
+    else:
+        print("Pas bon")
+        vies = vies -1
+    
+    if "_" not in mot_cache:
+        print("super")
 
 
