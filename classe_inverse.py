@@ -1,4 +1,5 @@
-''' Projet Jeu du pendu, classe inversé, groupe C
+''' 
+Projet Jeu du pendu, classe inversé, groupe C
 
 IMPORTANT ! MERCI DE BIEN LIRE !
 
@@ -24,7 +25,7 @@ Etape 6 (sauvegarder les modifications) : dans le terminal, tapez : git add .
 Il y a encore un espace entre "add" et "."
 
 Etape 7 (création d'une sauvegarde) : dans le terminal, tapez : git commit -m "description des modifications"
-Faites le mot pour mot !
+Dans les guillements, mettez les changements / ajouts que vous avez fait dans le programme
 
 Etape 8 (envoyer sur GitHub) : dans le terminal, tapez : git push
 
@@ -34,10 +35,21 @@ Merci de prendre en compte toutes les étapes minutieusement, et ne pas modifier
 Pour tout problème, merci de me contacter en MP sur Sonate (Melvin Lannoy), ou de passer par le forum de discussion Introduction à la programmation, ou de contacter votre tuteur.
 
 N'oubliez pas de faire un Ctrl + S à chaques modifications ! Sinon vous perdez votre travail !
-
-Bon travail à vous, groupe C !!
-
 '''
+
+
+
+# fichier dictionnaire
+
+import os
+if os.path.exists("dictionnaire.txt"):
+    with open ("dictionnaire.txt", "r") as file:
+        print(file.readlines())
+        file.close()
+else:
+    print("Le document n'existe pas ! Vérifiez les lignes 45 et 46.")
+
+
 
 
 
