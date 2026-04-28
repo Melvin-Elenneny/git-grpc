@@ -35,28 +35,25 @@ Merci de prendre en compte toutes les étapes minutieusement, et ne pas modifier
 Pour tout problème, merci de me contacter en MP sur Sonate (Melvin Lannoy), ou de passer par le forum de discussion Introduction à la programmation, ou de contacter votre tuteur.
 
 N'oubliez pas de faire un Ctrl + S à chaques modifications ! Sinon vous perdez votre travail !
+
+Aides: dans le cours "Introduction à la programmation", cliquez sur "Aides & récap" en bas du jalon 8
+Vous y trouverez aussi ce lien : https://docs.python.org/fr/3/tutorial/inputoutput.html#reading-and-writing-files
 '''
 
 
 
-# fichier dictionnaire / tirage mot aléatoire
 
-import os
-import random
+from random import random
 
-if os.path.exists("dictionnaire.txt"):
-    with open ("dictionnaire.txt", "r") as file:
-        mots_du_dictionnaire = file.readlines()
-        mot_random = random.choice(mots_du_dictionnaire)
-        print(mot_random)
-        
-else:
-    print("Le document n'existe pas ! Vérifiez les lignes 47 et 48.")
+# lecture du fichier "dictionnaire.txt"
+f = open("dictionnaire.txt", "r", encoding="utf-8")
+with open("dictionnaire.txt", encoding="utf-8") as f:
+    lines = f.read()
+    #print(lines) je teste l'affichage, ne pas prendre en compte, cette ligne sera supprimée
+f.closed
 
 
-
-
-
+# mot aléatoire
 
 
 
