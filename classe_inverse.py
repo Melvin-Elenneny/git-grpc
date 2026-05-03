@@ -46,10 +46,9 @@ Vous y trouverez aussi ce lien : https://docs.python.org/fr/3/tutorial/inputoutp
 from random import choice
 
 # lecture du fichier "dictionnaire.txt"
-#f = open("dictionnaire.txt", "r", encoding="utf-8")
 with open("dictionnaire.txt", "r", encoding="utf-8") as f:
     lignes = f.readlines()
-    #print(lignes) #je teste l'affichage, ne pas prendre en compte, cette ligne sera supprimée
+    
 f.closed
 
 
@@ -71,27 +70,34 @@ vies = 5
 
 
 # tentatives
-while vies > 0:
-    print("Mot :", mot_cache)
-    print("Vies restantes :", vies)
+def jeu(mot, mot_cache, vies):
+    while vies > 0:
+        print("\nMot :", " " .join(mot_cache))
+        print("\nVies restantes :", vies)
 
-    lettre = input("Saisissez une lettre :")
+        lettre = input("\nSaisissez une lettre : ")
 
-    if lettre in mot:
-        print("Ok")
-        
-        position = 0
-        for i in mot:
-            if i == lettre:
-                mot_cache[position] = lettre
+        if lettre in mot:
+            print("\nLettre trouvée ")
             
-            position = position + 1
-    
-    else:
-        print("Pas bon")
-        vies = vies -1
-    
-    if "_" not in mot_cache:
-        print("super")
+            position = 0
+            for i in mot:
+                if i == lettre:
+                    mot_cache[position] = lettre
+                
+                position = position + 1
+        
+        else:
+            print("\nCette lettre n'est pas dans le mot ")
+            vies = vies -1
+        
+        if "_" not in mot_cache:
+            print(f"\nBravo ! Le mot était: {mot} ")
+            return
+        
+    if vies == 0:
+        print(f"\nPerdu ! Le mot était: {mot}")
+
+jeu(mot, mot_cache, vies)
 
 
