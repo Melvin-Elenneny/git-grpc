@@ -40,7 +40,7 @@ Aides: dans le cours "Introduction √† la programmation", cliquez sur "Aides & r√
 Vous y trouverez aussi ce lien : https://docs.python.org/fr/3/tutorial/inputoutput.html#reading-and-writing-files
 '''
 
-
+# Devoir fait par Souad Himiche et Melvin Lannoy
 
 
 from random import choice
